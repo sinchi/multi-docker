@@ -4,7 +4,7 @@ services:
   - docker
 
 before_install:
- - docker build -f ./client/Dockerfile.dev ./client -t ayoub/multitest
+ - docker build -f .\client\Dockerfile.dev .\client -t ayoub/multitest
 
 script:
   - docker run -e CI=true ayoub/multitest npm run test -- --coverage
