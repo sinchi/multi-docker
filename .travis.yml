@@ -15,12 +15,12 @@ after_success:
   - docker build -t ayoub/multi-server ./server
   - docker build -t ayoub/multi-worker ./worker
  
- # login to dockerhub
-- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  # login to dockerhub
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
-# push image to dockerhub
-- docker push ayoub/multi-client
-- docker push ayoub/multi-nginx
-- docker push ayoub/multi-server
-- docker push ayoub/multi-worker
+  # push image to dockerhub
+  - docker push ayoub/multi-client
+  - docker push ayoub/multi-nginx
+  - docker push ayoub/multi-server
+  - docker push ayoub/multi-worker
 
