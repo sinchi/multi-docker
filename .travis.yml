@@ -15,7 +15,7 @@ after_success:
   - docker build -t ayoub/multi-server ./server
   - docker build -t ayoub/multi-worker ./worker
  
-  # login to dockerhub
+  # login to dockerhub to
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
   # push image to dockerhub
